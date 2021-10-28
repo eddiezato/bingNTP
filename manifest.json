@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "bingNTP",
+  "description": "Local new tab page with bing image",
+  "version": "1.0",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "service_worker": "bg.js"
+  },
+  "permissions": ["storage"],
+  "host_permissions" : [
+    "https://www.bing.com/*"
+  ],
+  "icons": {
+    "16": "i16.png",
+    "32": "i32.png",
+    "48": "i48.png"
+  }
+}
