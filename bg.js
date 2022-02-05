@@ -4,6 +4,7 @@ function setbingimage(curdate, message) {
       .then(out => chrome.storage.local.set({
         "ntpurl": "https://www.bing.com" + out.images[0].url,
         "ntptext": out.images[0].copyright.substr(0, out.images[0].copyright.indexOf(" (©")),
+        "ntpbg": (navigator.userAgentData.brands.findIndex(item => item.brand.includes("Edge")) == -1 ? "#35363A" : "#2B2B2B"),
         "date": curdate}, function() {
           console.log(message + "\nhttps://www.bing.com" + out.images[0].url + "\n" + out.images[0].copyright);}))
     .catch(err => console.log(err));
