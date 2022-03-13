@@ -1,5 +1,5 @@
 function setbingimage(curdate, message) {
-  fetch("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US")
+  fetch("https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1")
     .then(res => res.json())
       .then(out => chrome.storage.local.set({
         "ntpurl": "https://www.bing.com" + out.images[0].url,
